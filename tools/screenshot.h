@@ -55,7 +55,7 @@ public:
 
     enum Result {
         Failure = 0,
-        Success = 1,
+        Successs = 1,
         Cancel = 2
     };
     Q_ENUM(Result)

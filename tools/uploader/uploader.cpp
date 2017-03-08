@@ -22,6 +22,8 @@
 
 #include <QtNetwork>
 #include <QSettings>
+#include <QClipboard>
+#include <QApplication>
 
 Uploader *Uploader::mInstance = 0;
 
@@ -110,6 +112,7 @@ void Uploader::upload(const QString &fileName, const QString &uploadService)
 
         uploader->deleteLater();
         emit done(file, url, deleteHash);
+        QApplication::clipboard()->setText(url, QClipboard::Clipboard);
     });
 
     mUploaders.append(uploader);

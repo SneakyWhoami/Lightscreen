@@ -247,7 +247,7 @@ void Screenshot::save()
         QApplication::clipboard()->setPixmap(mPixmap, QClipboard::Clipboard);
 
         if (!mOptions.file) {
-            result = Screenshot::Success;
+            result = Screenshot::Successs;
         }
     }
 
@@ -257,9 +257,9 @@ void Screenshot::save()
         if (name.isEmpty()) {
             result = Screenshot::Cancel;
         } else if (mUnloaded) {
-            result = (QFile::rename(mUnloadFilename, fileName)) ? Screenshot::Success : Screenshot::Failure;
+            result = (QFile::rename(mUnloadFilename, fileName)) ? Screenshot::Successs : Screenshot::Failure;
         } else if (mPixmap.save(fileName, 0, mOptions.quality)) {
-            result = Screenshot::Success;
+            result = Screenshot::Successs;
         } else {
             result = Screenshot::Failure;
         }

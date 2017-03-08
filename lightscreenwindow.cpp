@@ -206,7 +206,7 @@ void LightscreenWindow::cleanup(const Screenshot::Options &options)
     }
 
     if (settings()->value("options/playSound", false).toBool()) {
-        if (options.result == Screenshot::Success) {
+        if (options.result == Screenshot::Successs) {
             QSound::play("sounds/ls.screenshot.wav");
         } else {
 #ifdef Q_OS_WIN
@@ -220,7 +220,7 @@ void LightscreenWindow::cleanup(const Screenshot::Options &options)
 
     updateStatus();
 
-    if (options.result != Screenshot::Success) {
+    if (options.result != Screenshot::Successs) {
         return;
     }
 
@@ -377,7 +377,7 @@ void LightscreenWindow::executeArguments(const QStringList &arguments)
 void LightscreenWindow::notify(const Screenshot::Result &result)
 {
     switch (result) {
-    case Screenshot::Success:
+    case Screenshot::Successs:
         mTrayIcon->setIcon(QIcon(":/icons/lightscreen.yes"));
 
         if (mHasTaskbarButton) {
@@ -645,7 +645,7 @@ void LightscreenWindow::showScreenshotMessage(const Screenshot::Result &result, 
     QString title;
     QString message;
 
-    if (result == Screenshot::Success) {
+    if (result == Screenshot::Successs) {
         title = QFileInfo(fileName).fileName();
 
         if (settings()->value("file/target").toString().isEmpty()) {
