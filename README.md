@@ -12,5 +12,8 @@ C++ is not my strongest language.
 
 This tool is pretty cool!
 
+`qmake`, `make`, and then just put the binary into your path somewhere or whatever you like. There is no `install` recipe. You WILL get errors in compilation unless you have a [Recent version of Qt](https://www.qt.io/download/)
+
+
 
 More information at http://lightscreen.com.ar
