@@ -1,5 +1,5 @@
 ##Lightscreen
-[![Coverity status](https://scan.coverity.com/projects/11983/badge.svg)](https://scan.coverity.com/projects/ckaiser-lightscreen)
+[![Coverity status](https://scan.coverity.com/projects/11983/badge.svg)](https://scan.coverity.com/projects/sneakywhoami-lightscreen)
 
 A screenshot tool.
 This fork repairs Linux support and uploader-url-to-clipboard.
